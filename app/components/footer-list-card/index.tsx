@@ -2,21 +2,26 @@ import { FaCodeFork } from "react-icons/fa6";
 import ButtonDropdown from "../buttons/button-drop-down";
 import { IoIosStar } from "react-icons/io";
 
+type dataRepo = {
+  language: string;
+  stargazers_count: number;
+  forks_count: number;
+  updated_at: string;
+};
 interface FooterListCardTypes {
-  repo: any;
+  repo: dataRepo;
 }
 
 const FooterListCard = (props: FooterListCardTypes) => {
   const { repo } = props;
-
+  console.log("repo", repo);
   const tolocalTime = (date: string) => {
     if (!date) return "Unknown";
-    let updateDate = new Date(date);
+    const updateDate = new Date(date);
     return updateDate.toDateString();
   };
 
   const languageColor = () => {
-    console.log("repo?.language", repo?.language);
     switch (repo?.language) {
       case "javascript":
         return "bg-yellow-400";

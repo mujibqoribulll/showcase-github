@@ -1,10 +1,10 @@
 // ?q=${username}&per_page=5
 
 import { getUser, getUserRepo } from "../services/user"
-import { useGetService } from "./service"
+import { UseGetService } from "./service"
 
 export const getUserGithub = () => {
-    const { state, service, reset } = useGetService()
+    const { state, service, reset } = UseGetService()
 
     return {
         getUserGithubState: state,
@@ -15,7 +15,7 @@ export const getUserGithub = () => {
 
 
 export const getUserRepository = () => {
-    const { state, service, reset } = useGetService()
+    const { state, service, reset } = UseGetService()
 
     return {
         getUserGithubRepoState: state,

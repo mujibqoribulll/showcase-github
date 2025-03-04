@@ -26,8 +26,8 @@ export const resetStatusHook = (
 
   export const setErrorMessage = (action: any) => {
     if (typeof action === 'string') return action;
-    let error = action?.paylaod || action;
-    let message =
+    const error = action?.paylaod || action;
+    const message =
       error?.response?.data?.data?.message ??
       error?.response?.data?.meta?.message ??
       error?.response?.data?.message ??

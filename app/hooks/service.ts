@@ -9,11 +9,11 @@ const initialState: InitialState = {
 };
 
 
-export const useGetService = () => {
+export const UseGetService = () => {
     const [state, setState] = useState<InitialState>(initialState);
 
     const reset = (key: ResetStatusHook) => {
-        let stateNew = resetStatusHook(initialState, state, key);
+        const stateNew = resetStatusHook(initialState, state, key);
         setState(stateNew);
     };
 

@@ -1,5 +1,5 @@
 "use client";
-import { ChangeEvent, FormEvent, useEffect, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { getUserGithub } from "@/app/hooks/user";
 import ButtonText from "@/app/components/buttons/button-text";
 import ButtonDropdown from "@/app/components/buttons/button-drop-down";
@@ -21,7 +21,7 @@ const ListUsersGithub = () => {
 
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    let payload = {
+    const payload = {
       q: state?.keyword,
       per_page: state?.perPage,
     };

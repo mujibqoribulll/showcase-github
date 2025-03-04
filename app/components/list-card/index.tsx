@@ -13,8 +13,8 @@ const ListCard = (props: any) => {
     getUserRepository();
 
   const handleDropdown = () => {
-    let newListDropdown: string[] = [...listDropdown];
-    let findindex = newListDropdown.findIndex((item) => item === user?.login);
+    const newListDropdown: string[] = [...listDropdown];
+    const findindex = newListDropdown.findIndex((item) => item === user?.login);
     if (findindex === -1) {
       setListDropdown([...newListDropdown, user?.login]);
       getUserGithubRepoService(user?.repos_url);

@@ -14,7 +14,6 @@ interface FooterListCardTypes {
 
 const FooterListCard = (props: FooterListCardTypes) => {
   const { repo } = props;
-  console.log("repo", repo);
   const tolocalTime = (date: string) => {
     if (!date) return "Unknown";
     const updateDate = new Date(date);

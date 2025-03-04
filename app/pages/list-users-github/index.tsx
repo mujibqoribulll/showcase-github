@@ -37,8 +37,7 @@ const ListUsersGithub = () => {
     setState((prevState) => ({ ...prevState, keyword: "" }));
     getUserGithubReset("all");
   };
-  console.log("getUserGithub?.data?.length ", getUserGithubState);
-  return (
+   return (
     <div className="container mx-auto  w-full lg:w-1/2 my-2 flex flex-col gap-y-3">
       <form
         onSubmit={onSubmit}

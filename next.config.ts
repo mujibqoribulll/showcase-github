@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     domains: ['avatars.githubusercontent.com'],
     unoptimized: true,
   },
-  output: "export",
+  basePath: '/showcase-github',
   trailingSlash: true,
 };
 

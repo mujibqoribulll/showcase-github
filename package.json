@@ -9,7 +9,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "next build && next export && gh-pages -d out"
+    "deploy": "rm -rf .next && next build && gh-pages -d .next/static"
   },
   "dependencies": {
     "axios": "^1.8.1",

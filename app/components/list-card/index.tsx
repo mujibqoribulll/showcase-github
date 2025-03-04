@@ -50,12 +50,20 @@ const ListCard = (props: any) => {
         />
       </div>
       {getUserGithubRepoState?.loading === "pending" ? (
-        <div className=" mx-3 mb-3 p-4 bg-gray-800 rounded-lg animate-pulse">
-          <div className="h-4 bg-gray-700 rounded w-3/4 mb-2" />
-          <div className="h-3 bg-gray-700 rounded w-1/2 mb-2" />
-          <div className="h-4 bg-gray-700 rounded w-3/4 mb-2" />
-          <div className="h-3 bg-gray-700 rounded w-1/2" />
-        </div>
+        <>
+          <div className=" mx-3 mb-3 p-4 bg-gray-800 rounded-lg animate-pulse">
+            <div className="h-4 bg-gray-700 rounded w-3/4 mb-2" />
+            <div className="h-3 bg-gray-700 rounded w-1/2 mb-2" />
+            <div className="h-4 bg-gray-700 rounded w-3/4 mb-2" />
+            <div className="h-3 bg-gray-700 rounded w-1/2" />
+          </div>
+          <div className=" mx-3 mb-3 p-4 bg-gray-800 rounded-lg animate-pulse">
+            <div className="h-4 bg-gray-700 rounded w-3/4 mb-2" />
+            <div className="h-3 bg-gray-700 rounded w-1/2 mb-2" />
+            <div className="h-4 bg-gray-700 rounded w-3/4 mb-2" />
+            <div className="h-3 bg-gray-700 rounded w-1/2" />
+          </div>
+        </>
       ) : (
         listDropdown.includes(user?.login) && (
           <div className="bg-slate-200 ml-5 text-gray-900 p-2 mx-5 mb-5 mt-2 rounded-lg">
@@ -80,6 +88,11 @@ const ListCard = (props: any) => {
                 <FooterListCard repo={repo} />
               </div>
             ))}
+            {getUserGithubRepoState?.data?.length <= 0 ? (
+              <h2 className="text-sm font-semibold font-mono text-center">
+                Repository not found.
+              </h2>
+            ) : null}
           </div>
         )
       )}

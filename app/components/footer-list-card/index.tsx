@@ -25,7 +25,7 @@ const FooterListCard = (props: FooterListCardTypes) => {
     switch (repo?.language) {
       case "javascript":
         return "bg-yellow-400";
-      case "typescript":
+      case "Typescript":
       case "Go":
         return "bg-blue-400";
       case "HTML":
